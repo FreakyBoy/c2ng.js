@@ -29,13 +29,13 @@ Alternatively, you can embed the script by copy pasting the code below:
 attribution.save();
 ```
 
-This automatically calls the [attribution.save()](https://github.com/pearmill/c2ng/blob/master/API.md#save) function (in the last line). If you're modifying the settings, call the [attribution.settings()](https://github.com/pearmill/c2ng/blob/master/API.md#settings) function before the [attribution.save()](https://github.com/pearmill/c2ng/blob/master/API.md#save) call.
+This automatically calls the [attribution.save()](https://github.com/FreakyBoy/c2ng/blob/master/API.md#save) function (in the last line). If you're modifying the settings, call the [attribution.settings()](https://github.com/FreakyBoy/c2ng/blob/master/API.md#settings) function before the [attribution.save()](https://github.com/FreakyBoy/c2ng/blob/master/API.md#save) call.
 
 ## Usage
 
-In order to actually track a visit, you are to call [attribution.save()](https://github.com/pearmill/c2ng/blob/master/API.md#save) function.
+In order to actually track a visit, you are to call [attribution.save()](https://github.com/FreakyBoy/c2ng/blob/master/API.md#save) function.
 
-You can control the parameters the module saves, and how it tracks visits using the [attribution.settings()](https://github.com/pearmill/c2ng/blob/master/API.md#settings) function.
+You can control the parameters the module saves, and how it tracks visits using the [attribution.settings()](https://github.com/FreakyBoy/c2ng/blob/master/API.md#settings) function.
 
 ### Example
 

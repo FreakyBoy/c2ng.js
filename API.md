@@ -1,7 +1,7 @@
 # c2ng.js API
 
 ## settings
-You can use this function to set or retrieve the current settings. If you change the settings, all the subsequent [save](https://github.com/pearmill/c2ng/blob/master/API.md#analyticsjs) calls will be affected.
+You can use this function to set or retrieve the current settings. If you change the settings, all the subsequent [save](https://github.com/FreakyBoy/c2ng/blob/master/API.md#analyticsjs) calls will be affected.
 
 **Signature**
 ```javascript
