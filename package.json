@@ -1,10 +1,13 @@
 {
-  "name": "@pearmill/attribution.js",
-  "version": "1.0.5",
+  "name": "@patryk.rzka/c2ng",
+  "version": "1.0.0",
   "description": "A localized tracking script to attribute marketing channels.",
-  "main": "attribution.js",
-  "repository": "https://github.com/pearmill/attribution.js",
-  "author": "Nima Gardideh <nima@pearmill.com>",
+  "main": "c2ng.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FreakyBoy/c2ng.js.git"
+  },
+  "author": "Patryk Rzyszka <p.rzyszka@gmail.com>",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
@@ -21,5 +24,12 @@
   },
   "dependencies": {
     "js-cookie": "^2.2.1"
+  },
+  "bugs": {
+    "url": "https://github.com/FreakyBoy/c2ng.js/issues"
+  },
+  "homepage": "https://github.com/FreakyBoy/c2ng.js#readme",
+  "directories": {
+    "lib": "lib"
   }
 }

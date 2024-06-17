@@ -1,6 +1,6 @@
 const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
-const libraryName = 'attribution';
+const libraryName = 'c2ng';
 
 let plugins = [];
 

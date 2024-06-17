@@ -1,7 +1,7 @@
-# Attribution.js API
+# c2ng.js API
 
 ## settings
-You can use this function to set or retrieve the current settings. If you change the settings, all the subsequent [save](https://github.com/pearmill/attribution.js/blob/master/API.md#analyticsjs) calls will be affected.
+You can use this function to set or retrieve the current settings. If you change the settings, all the subsequent [save](https://github.com/pearmill/c2ng/blob/master/API.md#analyticsjs) calls will be affected.
 
 **Signature**
 ```javascript
@@ -98,7 +98,7 @@ Function returns the saved parameters object if the visit is saved, or undefined
     "_ga": "...",
     "_gid": "..."
   },
-  "page": "https://pearmill.com/?utm_campaign=test",
+  "page": "https://network-genius.com/?utm_campaign=test",
   "referrer": ""
 }
 ```
@@ -126,7 +126,7 @@ Function returns the parameters object for the current visit.
     "_ga": "...",
     "_gid": "..."
   },
-  "page": "https://pearmill.com/?utm_campaign=test",
+  "page": "https://network-genius.com/?utm_campaign=test",
   "referrer": ""
 }
 ```
@@ -154,7 +154,7 @@ Function returns first tracked visits parameters object.
     "_ga": "...",
     "_gid": "..."
   },
-  "page": "https://pearmill.com/?utm_campaign=hello",
+  "page": "https://network-genius.com/?utm_campaign=hello",
   "referrer": "https://google.com"
 }
 ```
@@ -182,7 +182,7 @@ Function returns an array of all tracked visits' parameters objects.
       "_ga": "...",
       "_gid": "..."
     },
-    "page": "https://pearmill.com?utm_campaign=hello",
+    "page": "https://network-genius.com?utm_campaign=hello",
     "referrer": "https://google.com"
   },
   {
@@ -194,7 +194,7 @@ Function returns an array of all tracked visits' parameters objects.
       "_ga": "...",
       "_gid": "..."
     },
-    "page": "https://pearmill.com?utm_campaign=test",
+    "page": "https://network-genius.com?utm_campaign=test",
     "referrer": ""
   }
 ]

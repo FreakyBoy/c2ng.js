@@ -54,7 +54,7 @@ describe("module", () => {
       delete window.location
       window.location = {
         search: '?',
-        href: 'https://pearmill.com/'
+        href: 'https://network-genius.com/'
       }
 
       const paramObject = attribution.save();
