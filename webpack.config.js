@@ -40,7 +40,7 @@ const minified = {
     filename: `${libraryName}.min.js`
   },
   optimization: {
-    minimize: true,
+    minimize: false,
     removeEmptyChunks: true,
     mergeDuplicateChunks: true,
     providedExports: true,
@@ -48,6 +48,8 @@ const minified = {
     minimizer: [
       new TerserPlugin({
         terserOptions: {
+          keep_fnames: true, // Verhindert das Umbenennen von Funktionsnamen
+          mangle: true, // Verhindert das Umbenennen von Variablen
           output: {
             comments: false,
           },

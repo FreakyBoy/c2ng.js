@@ -1,6 +1,6 @@
 {
   "name": "@patryk.rzka/c2ng",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A localized tracking script to attribute marketing channels.",
   "main": "c2ng.js",
   "repository": {
