@@ -41,15 +41,15 @@ const minified = {
   },
   optimization: {
     minimize: false,
-    removeEmptyChunks: true,
-    mergeDuplicateChunks: true,
+    removeEmptyChunks: false,
+    mergeDuplicateChunks: false,
     providedExports: true,
     usedExports: true,
     minimizer: [
       new TerserPlugin({
         terserOptions: {
           keep_fnames: true, // Verhindert das Umbenennen von Funktionsnamen
-          mangle: true, // Verhindert das Umbenennen von Variablen
+          mangle: false, // Verhindert das Umbenennen von Variablen
           output: {
             comments: false,
           },
