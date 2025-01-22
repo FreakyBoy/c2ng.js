@@ -1,8 +1,20 @@
 const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
-const libraryName = 'c2ng';
+const { BannerPlugin } = require('webpack');
+const libraryName = 'heimdall';
 
-let plugins = [];
+let plugins = [
+  new BannerPlugin({
+    banner: `
+    /*!
+    * ${libraryName} - Copyright (c) ${new Date().getFullYear()} Patryk Rzyszka
+    * Lizenz: CC BY-NC 4.0
+    * Weitere Informationen: https://creativecommons.org/licenses/by-nc/4.0/
+    */`,
+    raw: false, // stellt sicher, dass der Kommentar roh eingefügt wird und nicht formatiert
+    entryOnly: true, // Banner wird nur in den Entry-Dateien eingefügt
+  })
+];
 
 const baseConfig = {
   entry: [`./${libraryName}.js`],
@@ -18,7 +30,7 @@ const baseConfig = {
   resolve: {
     extensions: ['.js']
   },
-  plugins: plugins
+  plugins: plugins,
 }
 
 const output = {
@@ -40,22 +52,25 @@ const minified = {
     filename: `${libraryName}.min.js`
   },
   optimization: {
-    minimize: false,
-    removeEmptyChunks: false,
+    minimize: true,
+    removeEmptyChunks: true,
     mergeDuplicateChunks: false,
     providedExports: true,
     usedExports: true,
     minimizer: [
       new TerserPlugin({
         terserOptions: {
-          keep_fnames: true, // Verhindert das Umbenennen von Funktionsnamen
-          mangle: false, // Verhindert das Umbenennen von Variablen
-          output: {
-            comments: false,
+          keep_fnames: false, // Verhindert das Umbenennen von Funktionsnamen
+          mangle: {
+            reserved: ['magaDomain'], // Verhindert das Umbenennen dieses Variablennamens
+          },
+          format: {
+            comments: /@license|Copyright/i, // Behalte nur Copyright- oder Lizenz-Kommentare
           },
         },
+        extractComments: false,
       }),
-    ]
+    ],
   }
 }
 

@@ -1,21 +1,13 @@
-The MIT License
+# heimdall Lizenzbedingungen
 
-Copyright (c) 2016-2020 Pearmill, Inc. https://network-genius.com
+## Nicht-kommerzielle Nutzung
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1. Du darfst diese Bibliothek **nur für nicht-kommerzielle Zwecke** verwenden.
+2. Jegliche **modifizierte oder unveränderte Weiterverbreitung** ist nur im Rahmen von nicht-kommerziellen Projekten erlaubt.
+3. Jede kommerzielle Nutzung dieser Bibliothek, einschließlich aber nicht beschränkt auf kommerzielle Softwareprodukte, erfordert eine schriftliche Erlaubnis oder eine Lizenzvereinbarung von Patryk Rzyszka [p.rzyszka@gmail.com].
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+## Einschränkungen
+- Du darfst den Code nicht verkaufen oder kommerziell vermarkten.
+- Du darfst den Code nicht in Projekten verwenden, die Profit durch die Nutzung der Bibliothek erzielen.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+Die Lizenz kann auf Anfrage geändert werden, um kommerzielle Lizenzen anzubieten.

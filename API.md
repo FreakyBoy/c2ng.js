@@ -1,12 +1,12 @@
-# c2ng.js API
+# heimdall API
 
 ## settings
-You can use this function to set or retrieve the current settings. If you change the settings, all the subsequent [save](https://github.com/FreakyBoy/c2ng/blob/master/API.md#analyticsjs) calls will be affected.
+You can use this function to set or retrieve the current settings. If you change the settings, all the subsequent [save](https://github.com/FreakyBoy/heimdall/blob/master/API.md#analyticsjs) calls will be affected.
 
 **Signature**
 ```javascript
 // options – (optional) - settings attributes to set/change
-attribution.settings(options = {});
+heimdall.settings(options = {});
 ```
 
 You can pass the following parameters as part of the `options` object:
@@ -65,12 +65,12 @@ Function returns the full settings object.
 **Usage**
 ```javascript
 // Set settings
-attribution.settings({
+heimdall.settings({
   limitVisits: 10
 });
 
 // Get settings
-attribution.settings();
+heimdall.settings();
 ```
 
 ## save
@@ -81,7 +81,7 @@ Each time it's called, a new visit is tracked.
 
 **Signature**
 ```javascript
-attribution.save();
+heimdall.save();
 ```
 
 **Returns**
@@ -98,7 +98,7 @@ Function returns the saved parameters object if the visit is saved, or undefined
     "_ga": "...",
     "_gid": "..."
   },
-  "page": "https://network-genius.com/?utm_campaign=test",
+  "page": "localhost/?utm_campaign=test",
   "referrer": ""
 }
 ```
@@ -109,7 +109,7 @@ Retrieve the current visit's parameters. Note: this function calls `save` for yo
 
 **Signature**
 ```javascript
-attribution.params();
+heimdall.params();
 ```
 
 **Returns**
@@ -126,7 +126,7 @@ Function returns the parameters object for the current visit.
     "_ga": "...",
     "_gid": "..."
   },
-  "page": "https://network-genius.com/?utm_campaign=test",
+  "page": "localhost/?utm_campaign=test",
   "referrer": ""
 }
 ```
@@ -137,7 +137,7 @@ Retrieve the first tracked visit's parameters.
 
 **Signature**
 ```javascript
-attribution.firstClickParams();
+heimdall.firstClickParams();
 ```
 
 **Returns**
@@ -154,7 +154,7 @@ Function returns first tracked visits parameters object.
     "_ga": "...",
     "_gid": "..."
   },
-  "page": "https://network-genius.com/?utm_campaign=hello",
+  "page": "localhost/?utm_campaign=hello",
   "referrer": "https://google.com"
 }
 ```
@@ -165,7 +165,7 @@ Retrieve all historical tracked visits' parameters.
 
 **Signature**
 ```javascript
-attribution.historicalParams();
+heimdall.historicalParams();
 ```
 **Returns**
 
@@ -182,7 +182,7 @@ Function returns an array of all tracked visits' parameters objects.
       "_ga": "...",
       "_gid": "..."
     },
-    "page": "https://network-genius.com?utm_campaign=hello",
+    "page": "localhost?utm_campaign=hello",
     "referrer": "https://google.com"
   },
   {
@@ -194,7 +194,7 @@ Function returns an array of all tracked visits' parameters objects.
       "_ga": "...",
       "_gid": "..."
     },
-    "page": "https://network-genius.com?utm_campaign=test",
+    "page": "localhost?utm_campaign=test",
     "referrer": ""
   }
 ]

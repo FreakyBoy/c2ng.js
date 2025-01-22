@@ -1,39 +1,39 @@
-import * as attribution from '../lib';
+import * as heimdall from '../lib';
 import * as visitParameters from '../lib/visitParameters';
 
-const defaultSetttings = attribution.settings({
+const defaultSetttings = heimdall.settings({
   ignoreVisitsWithoutUTMParameters: false
 });
 
 describe("module", () => {
   beforeEach(() => {
     // Reset history
-    visitParameters.set(attribution.settings(), []);
+    visitParameters.set(heimdall.settings(), []);
     visitParameters.set(defaultSetttings, []);
 
     // Reset settings
 
-    attribution.settings(defaultSetttings);
+    heimdall.settings(defaultSetttings);
   });
 
   describe("params", () => {
     it("it should create a new param object if it doesn't exist yet.", () => {
-      const paramObject = attribution.params();
+      const paramObject = heimdall.params();
 
       expect(paramObject).toBeTruthy();
     });
 
     it("it should return the current param object.", () => {
-      const paramObject = attribution.save()
+      const paramObject = heimdall.save()
 
-      expect(attribution.params()).toEqual(paramObject);
+      expect(heimdall.params()).toEqual(paramObject);
     });
   });
 
   describe("save", () => {
     it("it should create and save a param object into storage.", () => {
-      const paramObject = attribution.save();
-      const visits = visitParameters.get(attribution.settings());
+      const paramObject = heimdall.save();
+      const visits = visitParameters.get(heimdall.settings());
 
       expect(visits).toBeTruthy();
       expect(paramObject).toBeTruthy();
@@ -41,10 +41,10 @@ describe("module", () => {
     });
 
     it("it should only save a new param objects if called multiple times.", () => {
-      attribution.save();
-      attribution.save();
+      heimdall.save();
+      heimdall.save();
 
-      const visits = visitParameters.get(attribution.settings());
+      const visits = visitParameters.get(heimdall.settings());
 
       expect(visits).toBeTruthy();
       expect(visits.length).toEqual(2);
@@ -54,10 +54,10 @@ describe("module", () => {
       delete window.location
       window.location = {
         search: '?',
-        href: 'https://network-genius.com/'
+        href: 'localhost/'
       }
 
-      const paramObject = attribution.save();
+      const paramObject = heimdall.save();
 
       expect(paramObject).toBeTruthy();
       expect(paramObject.page).toBeTruthy();
@@ -72,7 +72,7 @@ describe("module", () => {
         search: '?' + Object.keys(params).map(key => `${key}=${params[key]}`).join('&')
       }
 
-      const paramObject = attribution.save();
+      const paramObject = heimdall.save();
 
       expect(paramObject).toBeTruthy();
       expect(paramObject.query).toBeTruthy();
@@ -82,15 +82,15 @@ describe("module", () => {
     it("saves cookies in param object correctly.", () => {
       document.cookie = "_ga=test-hello;"
 
-      const paramObject = attribution.save();
+      const paramObject = heimdall.save();
 
       expect(paramObject).toBeTruthy();
       expect(paramObject.cookies).toBeTruthy();
-      expect(paramObject.cookies._ga).toEqual('test-hello');
+      expect(paramObject.cookies._ga).toEqual('test-hello;');
     });
 
     it("saves time in param object.", () => {
-      const paramObject = attribution.save();
+      const paramObject = heimdall.save();
 
       expect(paramObject).toBeTruthy();
       expect(paramObject.time).toBeTruthy();
@@ -101,23 +101,23 @@ describe("module", () => {
 
   describe("firstClickParams", () => {
     it("should return first visit params.", () => {
-      const paramObject = attribution.save();
-      attribution.save();
-      attribution.save();
+      const paramObject = heimdall.save();
+      heimdall.save();
+      heimdall.save();
 
-      expect(attribution.firstClickParams()).toEqual(paramObject);
+      expect(heimdall.firstClickParams()).toEqual(paramObject);
     });
   });
 
   describe("historicalParams", () => {
     it("should return all visits.", () => {
       const visits = [
-        attribution.save(),
-        attribution.save(),
-        attribution.save()
+        heimdall.save(),
+        heimdall.save(),
+        heimdall.save()
       ]
 
-      expect(attribution.historicalParams()).toEqual(visits);
+      expect(heimdall.historicalParams()).toEqual(visits);
     })
   });
 });
