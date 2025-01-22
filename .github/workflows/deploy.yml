@@ -24,3 +24,8 @@ jobs:
           server: machalleswiedergut.de
           username: 493210-github
           password: ${{ secrets.password }}
+          exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **__tests__**
