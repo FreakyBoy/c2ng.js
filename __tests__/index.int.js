@@ -80,13 +80,13 @@ describe("module", () => {
     });
 
     it("saves cookies in param object correctly.", () => {
-      document.cookie = "_ga=test-hello;"
+      document.cookie = "_fbc=test-hello;"
 
       const paramObject = heimdall.save();
 
       expect(paramObject).toBeTruthy();
       expect(paramObject.cookies).toBeTruthy();
-      expect(paramObject.cookies._ga).toEqual('test-hello;');
+      expect(paramObject.cookies._fbc).toEqual('test-hello;');
     });
 
     it("saves time in param object.", () => {
