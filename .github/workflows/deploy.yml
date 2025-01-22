@@ -15,7 +15,7 @@ jobs:
 
       - name: 🔨 Build Project
         run: |
-          yarn install
+          
           yarn webpack
 
       - name: 📂 Sync files
