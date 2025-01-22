@@ -6,12 +6,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Install Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16' # Empfohlen: LTS-Version
-      - uses: stefanoeb/jest-action@1.0.4
-        with:
-          args: "--testPathIgnorePatterns='selenium\\.test\\.js'"
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn
+      - name: Run tests
+        run: yarn test --testPathIgnorePatterns='selenium\\.test\\.js'
 
