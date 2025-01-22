@@ -10,9 +10,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Empfohlen: LTS-Version
-      - name: Install Python
-        run: sudo apt-get install -y python3
+          node-version: '16' # Empfohlen: LTS-Version
       - uses: stefanoeb/jest-action@1.0.4
         with:
           args: "--testPathIgnorePatterns='selenium\\.test\\.js'"
