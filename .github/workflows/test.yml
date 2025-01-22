@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: '18' # Empfohlen: LTS-Version
       - name: Install Python
-        run: sudo apt-get install -y python
+        run: sudo apt-get install -y python3
       - uses: stefanoeb/jest-action@master
         with:
           args: "--testPathIgnorePatterns='selenium\\.test\\.js'"
