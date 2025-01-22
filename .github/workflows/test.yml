@@ -10,5 +10,5 @@ jobs:
       - name: Install modules
         run: yarn
       - name: Run tests
-        run: yarn test --testPathIgnorePatterns='selenium\\.test\\.js'
+        run: yarn test --testPathIgnorePatterns='lib\selenium\\.test\\.js'
 
