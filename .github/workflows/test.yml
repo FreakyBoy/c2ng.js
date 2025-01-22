@@ -1,11 +1,13 @@
-#name: Test
-#
-#on: [push]
-#
-#jobs:
-#  test:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - uses: actions/checkout@v1
-#      - uses: stefanoeb/jest-action@master
-#
+name: Test
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: stefanoeb/jest-action@master
+        with:
+          args: "--testPathIgnorePatterns='selenium\\.test\\.js'"
+
